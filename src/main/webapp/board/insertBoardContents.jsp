@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,14 +11,28 @@
 
 <!-- include libraries(jQuery, bootstrap) -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+	crossorigin="anonymous" />
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+	crossorigin="anonymous"></script>
 <!-- include summernote css/js -->
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/lang/summernote-ko-KR.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/lang/summernote-en-US.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" rel="stylesheet" />
+<link
+	href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/lang/summernote-ko-KR.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/lang/summernote-en-US.js"></script>
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
+	rel="stylesheet" />
 <style>
 @font-face {
 	font-family: 'NotoSansKR';
@@ -318,73 +333,110 @@ hr.hr {
 </style>
 
 <script>
-            $(document).ready(function () {
-                // var fontList = ['굴림', '맑은고딕', '돋움', '바탕', 'J송명', '교보손글씨', '빙그레싸만코체', '주아체', '한림고딕체', '둥근모꼴체', 'NotoSansKR', 'Arial', 'Courier New', 'Verdana', 'Times New Roamn'];
-                $('#summernote').summernote({
-                    lang: 'ko-KR',
-                    height: 400,
-                    placeholder: "내용을 입력해주세요.",
-                    fontNames: ['굴림', '맑은고딕', '돋움', '바탕', 'J송명', '교보손글씨', '빙그레싸만코체', '주아체', '한림고딕체', '둥근모꼴체', 'NotoSansKR', 'Arial', 'Courier New', 'Verdana', 'Times New Roamn'],
-                    // addDefaultFonts: false,
-                    fontNamesIgnoreCheck: ['굴림', '맑은고딕', '돋움', '바탕', 'J송명', '교보손글씨', '빙그레싸만코체', '주아체', '한림고딕체', '둥근모꼴체', 'NotoSansKR', 'Arial', 'Courier New', 'Verdana', 'Times New Roamn'],
-                    callbacks: {
-                        onImageUpload: function (image) {
-                            console.log("works")
-                            data = new FormData();
-                            data.append("image", image[0]);
+	$(document)
+			.ready(
+					function() {
+						// var fontList = ['굴림', '맑은고딕', '돋움', '바탕', 'J송명', '교보손글씨', '빙그레싸만코체', '주아체', '한림고딕체', '둥근모꼴체', 'NotoSansKR', 'Arial', 'Courier New', 'Verdana', 'Times New Roamn'];
+						$('#summernote')
+								.summernote(
+										{
+											lang : 'ko-KR',
+											height : 400,
+											placeholder : "내용을 입력해주세요.",
+											fontNames : [ '굴림', '맑은고딕', '돋움',
+													'바탕', 'J송명', '교보손글씨',
+													'빙그레싸만코체', '주아체', '한림고딕체',
+													'둥근모꼴체', 'NotoSansKR',
+													'Arial', 'Courier New',
+													'Verdana',
+													'Times New Roamn' ],
+											// addDefaultFonts: false,
+											fontNamesIgnoreCheck : [ '굴림',
+													'맑은고딕', '돋움', '바탕', 'J송명',
+													'교보손글씨', '빙그레싸만코체', '주아체',
+													'한림고딕체', '둥근모꼴체',
+													'NotoSansKR', 'Arial',
+													'Courier New', 'Verdana',
+													'Times New Roamn' ],
+											callbacks : {
+												onImageUpload : function(image) {
+													console.log("works")
+													data = new FormData();
+													data.append("image",
+															image[0]);
 
-                            $.ajax({
-                                data: data,
-                                type: "post",
-                                url: "/imageupload.board",
-                                cache: false,
-                                contentType: false,
-                                processData: false,
-                                success: function (url) {
-                                    console.log(url)
-                                    var image = $('<img>').attr('src', url);
-                                    $("#summernote").summernote("insertNode", image[0]);
-                                },
-                                error: function (a, b, c) {
-                                    console.log(a);
-                                    console.log(b);
-                                    console.log(c);
-                                }
-                            });
-                        }
-                    }
-                });
+													$
+															.ajax({
+																data : data,
+																type : "post",
+																url : "/imageupload.board",
+																cache : false,
+																contentType : false,
+																processData : false,
+																success : function(
+																		url) {
+																	console
+																			.log(url)
+																	var image = $(
+																			'<img>')
+																			.attr(
+																					'src',
+																					url);
+																	$(
+																			"#summernote")
+																			.summernote(
+																					"insertNode",
+																					image[0]);
+																},
+																error : function(
+																		a, b, c) {
+																	console
+																			.log(a);
+																	console
+																			.log(b);
+																	console
+																			.log(c);
+																}
+															});
+												}
+											}
+										});
 
-                $('#summernote').summernote('fontName', '둥근모꼴체');
+						$('#summernote').summernote('fontName', '둥근모꼴체');
 
-                $('#insertBoardContents').on('click', function () {
-                    saveContent();
+						$('#insertBoardContents').on('click', function() {
+							saveContent();
 
+						});
+						function saveContent() {
 
-                });
-                function saveContent() {
+							//값 가져오기
+							var summernoteContent = $('#summernote')
+									.summernote('code'); //썸머노트(설명)
+							console.log("summernoteContent : "
+									+ summernoteContent);
+							var b_category = $("#b_category").val();
+							var b_title = $("#b_title").val();
 
-                    //값 가져오기
-                    var summernoteContent = $('#summernote').summernote('code');        //썸머노트(설명)
-                    console.log("summernoteContent : " + summernoteContent);
-                    var b_category = $("#b_category").val();
-                    var b_title = $("#b_title").val();
-
-                    $.ajax({
-                        url: "/insertBoardContents.board",
-                        type: "post",
-                        data: {
-                            "b_category": b_category,
-                            "b_title": b_title,
-                            "b_content": summernoteContent
-                        }, success: function (data) {
-                            var b_seq = data;
-                            location.href = "/selectBoardContents.board?b_seq=" + b_seq;
-                        }
-                    });
-                };
-            });
-        </script>
+							$
+									.ajax({
+										url : "/insertBoardContents.board",
+										type : "post",
+										data : {
+											"b_category" : b_category,
+											"b_title" : b_title,
+											"b_content" : summernoteContent
+										},
+										success : function(data) {
+											var b_seq = data;
+											location.href = "/selectBoardContents.board?b_seq="
+													+ b_seq;
+										}
+									});
+						}
+						;
+					});
+</script>
 </head>
 
 <body>
@@ -394,26 +446,36 @@ hr.hr {
 				<img src="/img/title.png" id="titleimg">
 			</div>
 			<div class="col-8 col-md-4 col-lg-3 searchbox">
-				<input type="text" class="searchboxin" id="searchtext" onkeyup="enterkey()" name="searchtext" /> <i class="fa-solid fa-magnifying-glass searchboxin" id="searchbtn" style="color: white;"></i></a>
+				<input type="text" class="searchboxin" id="searchtext"
+					onkeyup="enterkey()" name="searchtext" /> <i
+					class="fa-solid fa-magnifying-glass searchboxin" id="searchbtn"
+					style="color: white;"></i></a>
 			</div>
 			<script>
-                    $("#titleimg").on("click", function () {
-                        location.href = "/main";
-                    })
+				$("#titleimg").on("click", function() {
+					location.href = "/main";
+				})
 
-                    $("#searchbtn").on("click", function () {
-                        location.href = "/search.content?searchtext=" + $("#searchtext").val();;
-                    })
+				$("#searchbtn").on(
+						"click",
+						function() {
+							location.href = "/search.content?searchtext="
+									+ $("#searchtext").val();
+							;
+						})
 
-                    function enterkey() { //검색창에 마우스 올린 후 엔터 누르면 바로 넘어가게 만드는 함수
-                        if (window.event.keyCode == 13) {
-                            location.href = "/search.content?searchtext=" + $("#searchtext").val();
-                        }
-                    }
-
-                </script>
+				function enterkey() { //검색창에 마우스 올린 후 엔터 누르면 바로 넘어가게 만드는 함수
+					if (window.event.keyCode == 13) {
+						location.href = "/search.content?searchtext="
+								+ $("#searchtext").val();
+					}
+				}
+			</script>
 			<div class="col-4 col-md-1 col-lg-1 menuicon">
-				<i class="fas fa-bars fa-2x" id="menuicon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style="color: white;"></i>
+				<i class="fas fa-bars fa-2x" id="menuicon"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasWithBothOptions"
+					aria-controls="offcanvasWithBothOptions" style="color: white;"></i>
 			</div>
 		</div>
 		<div class="row header"></div>
@@ -434,28 +496,36 @@ hr.hr {
 				<div class="title">
 					<div class="headerTitle">제목</div>
 					<div>
-						<input type="text" id="b_title" name="b_title" placeholder="제목을 입력하세요." style="border: none; width: 100%;">
+						<input type="text" id="b_title" name="b_title"
+							placeholder="제목을 입력하세요." style="border: none; width: 100%;">
 					</div>
 				</div>
 			</div>
 			<div class="row body" id="editor">
-				<div class="col-lg-12 col-md-12 col-sm-12" id="summernote" name="b_content"></div>
+				<div class="col-lg-12 col-md-12 col-sm-12" id="summernote"
+					name="b_content"></div>
 			</div>
-			
+
 		</div>
 	</div>
 	<div class="row footer">
 		<hr class="hr">
 		<div class="col-12 footerAtag">
-			<a href="#">회사소개</a> &nbsp&nbsp <a href="#">고객센터</a> &nbsp&nbsp <a href="#">이용약관</a> &nbsp&nbsp <a href="#">개인정보 처리방침</a>
+			<a href="#">회사소개</a> &nbsp&nbsp <a href="#">고객센터</a> &nbsp&nbsp <a
+				href="#">이용약관</a> &nbsp&nbsp <a href="#">개인정보 처리방침</a>
 		</div>
 		<div class="col-12 footerImpormation">(주)퍼플무드 | 대표이사 : 성태조</div>
-		<div class="col-12 footerImpormation">이메일 주소 : purpleMood@purplemood.com</div>
+		<div class="col-12 footerImpormation">이메일 주소 :
+			purpleMood@purplemood.com</div>
 		<div class="col-12 footerImpormation">사업자등록번호 : 000-00-000</div>
-		<div class="col-12 footerImpormation">통신판매업 신고번호 : 제 2022-서울중구-301e호</div>
-		<div class="col-12 footerImpormation">주소 : 대한민국 서울특별시 중구 남대문로 120, 대일빌딩 3층</div>
+		<div class="col-12 footerImpormation">통신판매업 신고번호 : 제
+			2022-서울중구-301e호</div>
+		<div class="col-12 footerImpormation">주소 : 대한민국 서울특별시 중구 남대문로
+			120, 대일빌딩 3층</div>
 		<div class="col-12 footerIcon">
-			<span class="snsIcon"><i class="fa-brands fa-instagram fa-2xl"></i></span> <span class="snsIcon"><i class="fa-brands fa-twitter fa-2xl"></i></span> <span class="snsIcon"> <i class="fa-brands fa-facebook fa-2xl"></i>
+			<span class="snsIcon"><i class="fa-brands fa-instagram fa-2xl"></i></span>
+			<span class="snsIcon"><i class="fa-brands fa-twitter fa-2xl"></i></span>
+			<span class="snsIcon"> <i class="fa-brands fa-facebook fa-2xl"></i>
 			</span>
 		</div>
 	</div>
@@ -464,9 +534,12 @@ hr.hr {
 	<c:choose>
 		<c:when test="${loginID!=null && loginID!='admin123'}">
 			<!-- 로그인 -->
-			<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+			<div class="offcanvas offcanvas-end" data-bs-scroll="true"
+				tabindex="-1" id="offcanvasWithBothOptions"
+				aria-labelledby="offcanvasWithBothOptionsLabel">
 				<div class="offcanvas-header">
-					<button type="button" data-bs-dismiss="offcanvas" id="colsebtn" aria-label="Close">
+					<button type="button" data-bs-dismiss="offcanvas" id="colsebtn"
+						aria-label="Close">
 						<i class="fa-solid fa-xmark fa-xl"></i>
 					</button>
 				</div>
@@ -490,17 +563,20 @@ hr.hr {
 					</div>
 				</div>
 				<script>
-                        $("#logoutBtn").on("click", function () {
-                            location.href = "/logout.member";
-                        })
-                    </script>
+					$("#logoutBtn").on("click", function() {
+						location.href = "/logout.member";
+					})
+				</script>
 			</div>
 		</c:when>
 		<c:when test="${loginID!=null && loginID == 'admin123'}">
 			<!-- 관리자 -->
-			<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+			<div class="offcanvas offcanvas-end" data-bs-scroll="true"
+				tabindex="-1" id="offcanvasWithBothOptions"
+				aria-labelledby="offcanvasWithBothOptionsLabel">
 				<div class="offcanvas-header">
-					<button type="button" data-bs-dismiss="offcanvas" id="colsebtn" aria-label="Close">
+					<button type="button" data-bs-dismiss="offcanvas" id="colsebtn"
+						aria-label="Close">
 						<i class="fa-solid fa-xmark fa-xl"></i>
 					</button>
 				</div>
@@ -524,10 +600,10 @@ hr.hr {
 					</div>
 				</div>
 				<script>
-                        $("#logoutBtn").on("click", function () {
-                            location.href = "/logout.member";
-                        })
-                    </script>
+					$("#logoutBtn").on("click", function() {
+						location.href = "/logout.member";
+					})
+				</script>
 			</div>
 		</c:when>
 	</c:choose>
